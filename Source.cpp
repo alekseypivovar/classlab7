@@ -46,6 +46,7 @@ int main()
 		}
 	}
 
+	
 	// zapolnyaem massiv summ
 	sum[0][0] = arr[0][0];
 	// stolbec
@@ -80,6 +81,7 @@ int main()
 	}
 
 	//vivod na pechar massiva s marshrutom
+	// НАДО ИЗ ПРАВОГО НИЖНЕГО УГЛА ИДТИ В ЛЕВЫЙ ВЕРХНИЙ. ИНАЧЕ НЕПРАВИЛЬНО
 	printf("\nTurtle way:\n");
 	int i = 0, j = 0;
 	while (1)
