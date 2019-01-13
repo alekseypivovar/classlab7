@@ -46,7 +46,6 @@ int main()
 		}
 	}
 
-	
 	// zapolnyaem massiv summ
 	sum[0][0] = arr[0][0];
 	// stolbec
@@ -81,22 +80,21 @@ int main()
 	}
 
 	//vivod na pechar massiva s marshrutom
-	// НАДО ИЗ ПРАВОГО НИЖНЕГО УГЛА ИДТИ В ЛЕВЫЙ ВЕРХНИЙ. ИНАЧЕ НЕПРАВИЛЬНО
 	printf("\nTurtle way:\n");
-	int i = 0, j = 0;
+	int i = M-1, j = N-1;
 	while (1)
 	{
 		arr[j][i] = 999;
-		if (j == N && i == M)
+		if (j == 0 && i == 0)
 			break;
-		else if (j == N)
-			i++;
-		else if (i == M)
-			j++;
-		else if (sum[j + 1][i] > sum[j][i + 1])
-			j++;
-		else if (sum[j + 1][i] < sum[j][i + 1])
-			i++;
+		else if (j == 0)
+			i--;
+		else if (i == 0)
+			j--;
+		else if (sum[j - 1][i] > sum[j][i - 1])
+			j--;
+		else if (sum[j - 1][i] < sum[j][i - 1])
+			i--;
 	}
 
 	for (int i = 0; i < M; i++)
